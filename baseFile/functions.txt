@@ -1,0 +1,25 @@
+functions
+(
+	forces
+	{
+		type forces;
+		functionObjectLibs ("libforces.so"); //Lib to load
+		patches (fixedWall); // change to your patch name
+		rhoInf 1.225; //Reference density for fluid
+		CofR (0.25 0 0); //Origin for moment calculations
+	}
+	forceCoeffs
+	{
+		type forceCoeffs;
+		functionObjectLibs ("libforces.so");
+		patches (fiexdWall); //change to your patch name
+		rhoInf 1.225;
+		CofR (0 0 0);
+		liftDir (0 1 0);
+		dragDir (1 0 0);
+		pitchAxis (0.25 0 0);
+		magUInf 10.0;
+		lRef 1;
+		Aref 1;
+	}
+);

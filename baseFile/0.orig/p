@@ -1,0 +1,86 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    object      p;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+#include        "include/initialConditions"
+
+dimensions      [0 2 -2 0 0 0 0];
+
+internalField   uniform $pressure;
+
+boundaryField
+{
+    #includeEtc "caseDicts/setConstraintTypes"
+
+    /*inlet
+    {
+        type            zeroGradient;
+    }
+
+    outlet
+    {
+        type            fixedValue;
+        value           $internalField;
+    }
+
+    lowerWall
+    {
+        type            zeroGradient;
+    }
+
+    motorBikeGroup
+    {
+        type            zeroGradient;
+    }
+
+    #include "include/frontBackUpperPatches"*/
+
+    inlet
+    {
+        type            zeroGradient;
+
+    }
+    floor
+    {
+        type            zeroGradient;
+    }
+    back
+    {
+        type            empty;
+
+    }
+    front
+    {
+        type            empty;
+
+    }
+    outlet
+    {
+      type            fixedValue;
+      value           uniform 0;
+
+    }
+    symm
+    {
+        type            symmetryPlane;
+
+    }
+    slipPatch
+    {
+        type            zeroGradient;
+    }
+}
+
+// ************************************************************************* //

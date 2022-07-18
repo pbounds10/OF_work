@@ -1,0 +1,19 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+
+aRef = 347.1; //speed of sound
+lRef = 1;
+Ti = 0.01; //turbulent intensity at the inlet
+mRef = 0.2; //reference velocity
+
+flowVelocity (69.42 0 0);
+pressure             0;
+turbulentKE 0.72;
+turbulentOmega 2.0;
+turbulentEpisilon 1.44;
+// ************************************************************************* //

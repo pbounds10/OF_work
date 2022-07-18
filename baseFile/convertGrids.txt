@@ -1,0 +1,15 @@
+#!/bin/bash
+
+plot3dToFoam ../../ -noBlank
+
+
+autoPatch -90 -overwrite
+
+
+topoSet
+
+
+createPatch -overwrite
+
+
+rename patches

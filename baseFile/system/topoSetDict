@@ -1,0 +1,54 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2112                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      topoSetDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+actions
+(
+    {
+        name    f_slip;
+        type    faceSet;
+        action  new;
+        source  boxToFace;
+        box     (-0.5 -1.15 -0.02)(0 0 0.0001);
+    }
+
+    {
+        name    f_slip;
+        type    faceSet;
+        action  subset;
+        source  boundaryToFace;
+        sourceInfo
+        {
+          name floor;
+        }
+
+    }
+
+    //this didn't seem to work for some reason. the goal was to remove any
+    //faces that were in front/back
+    /*{
+        name    f_slip;
+        type    faceSet;
+        action  delete;
+        source  boundaryToFace;
+        sourceInfo
+        {
+          name front,back;
+        }
+    }*/
+);
+
+
+// ************************************************************************* //

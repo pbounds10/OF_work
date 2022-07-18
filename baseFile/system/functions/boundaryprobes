@@ -1,0 +1,48 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+
+#include "functionInputs"
+
+boundaryprobes
+{
+    type            patchProbes;
+
+    libs            ("libsampling.so");
+
+    patches
+    (
+      floor
+    );
+
+    fields
+    (
+      p
+      skinFrictionCo
+    );
+
+    probeLocations
+    (
+      (0.0     -0.5 0.0)
+      (0.97008 -0.5 0.0)
+
+    );
+
+    writePrecision  $writePrec;
+    writeToFile     $writeToFile;
+    useUserTime     $useUserTime;
+    log             $logged;
+    timeStart       $tStart;
+    timeEnd         $tEnd;
+    executeControl  $executeCon;
+    executeInterval $executeInt;
+    writeControl    $writeCon;
+    writeInterval   $writeInt;
+}
+
+
+// ************************************************************************* //
