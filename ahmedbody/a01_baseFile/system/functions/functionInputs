@@ -6,7 +6,7 @@
 |    \\/     M anipulation  | Patrick Bounds Layout                           |
 \*---------------------------------------------------------------------------*/
 
-keyPatches ahmedBody25; //select the patches that you want to apply functions
+keyPatches ahmed_front ahmed_sides ahmed_top ahmed_bottom ahmed_slant ahmed_rear; //select the patches that you want to apply functions
 //dont use commas just spaces
 
 avgWind 200;
