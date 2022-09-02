@@ -1,0 +1,65 @@
+/*---------------------------------------------------------------------------------------------------------------*\
+|                                                                                                                 | 
+|    ANSA_VERSION: 20.1.2                                                                                         | 
+|                                                                                                                 | 
+|    file created by  A N S A  Fri Sep  2 11:36:43 2022                                                           | 
+|                                                                                                                 | 
+|    Output from: /nfs/projects/bounds-aero/boundsThesis/ahmedBody/ahmedSHAP/meshes/a01_baselineMesh_10mil.ansa   | 
+|                                                                                                                 | 
+\*---------------------------------------------------------------------------------------------------------------*/
+
+
+
+FoamFile
+{
+	version 2.0;
+	format binary;
+	class dictionary;
+	location "";
+	object controlDict;
+}
+/*---------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
+
+application UserSolver;
+
+startFrom startTime;
+
+startTime	0.;
+
+stopAt endTime;
+
+endTime	1.;
+
+deltaT 	1.;
+
+writeControl timeStep;
+
+writeInterval	1.;
+
+purgeWrite	0;
+
+writeFormat	binary;
+
+writePrecision	6;
+
+writeCompression	uncompressed;
+
+timeFormat	general;
+
+timePrecision	6;
+
+graphFormat	raw;
+
+runTimeModifiable	yes;
+
+adjustTimeStep	off;
+
+maxCo	1.;
+
+maxAlphaCo	1.;
+
+maxDeltaT	1.;
+
+functions {
+}

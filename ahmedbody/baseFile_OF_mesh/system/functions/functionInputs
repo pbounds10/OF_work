@@ -1,0 +1,26 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2112                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  | Patrick Bounds Layout                           |
+\*---------------------------------------------------------------------------*/
+
+keyPatches ahmedBody25; //select the patches that you want to apply functions
+//dont use commas just spaces
+
+avgWind 200;
+
+UInf 25; //
+rhoRef 1.21;
+
+writePrec       6;
+writeToFile     true;
+useUserTime     true;
+logged          true;
+tStart          0;
+tEnd            10000;
+executeCon      timeStep;
+executeInt      1000;
+writeCon        timeStep;
+writeInt        1000;

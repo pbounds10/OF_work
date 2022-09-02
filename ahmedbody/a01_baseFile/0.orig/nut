@@ -1,0 +1,136 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      nut;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 2 -1 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    #includeEtc "caseDicts/setConstraintTypes"
+
+    symmetry
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    inlet
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    outlet
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    lowerWall
+    {
+        type            nutkWallFunction;
+        value           uniform 0;
+    }
+    upperWall
+    {
+        type            calculated;
+        value           uniform 0;
+    }
+    ahmedBody25
+    {
+        type            nutkWallFunction;
+        value           uniform 0;
+    }
+
+
+
+
+    ahmed_front
+	{
+        type            nutkWallFunction;
+        value           uniform 0;
+	}
+
+	ahmed_sides
+	{
+        type            nutkWallFunction;
+        value           uniform 0;
+	}
+
+	ahmed_top
+	{
+        type            nutkWallFunction;
+        value           uniform 0;
+	}
+
+	ahmed_bottom
+	{
+        type            nutkWallFunction;
+        value           uniform 0;
+	}
+
+	ahmed_slant
+	{
+        type            nutkWallFunction;
+        value           uniform 0;
+	}
+
+	ahmed_rear
+	{
+        type            nutkWallFunction;
+        value           uniform 0;
+	}
+
+	inlet
+	{
+        type            calculated;
+        value           uniform 0;
+	}
+
+	side_right
+	{
+        type            calculated;
+        value           uniform 0;
+	}
+
+	side_left
+	{
+        type            calculated;
+        value           uniform 0;
+	}
+
+	outlet
+	{
+        type            calculated;
+        value           uniform 0;
+	}
+
+	top
+	{
+        type            calculated;
+        value           uniform 0;
+	}
+
+	bottom
+	{
+        type            nutkWallFunction;
+        value           uniform 0;
+	}
+
+
+}
+
+
+// ************************************************************************* //

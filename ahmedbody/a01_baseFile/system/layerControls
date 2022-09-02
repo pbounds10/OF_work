@@ -1,0 +1,50 @@
+addLayersControls
+{
+
+layers
+{
+
+	 "(ahmedBody25).*" 
+	{
+		nSurfaceLayers 10;
+	}
+
+}
+
+	relativeSizes false;
+
+	//thickness 0.005;
+
+	firstLayerThickness 0.001;
+
+	expansionRatio		1.5;
+	
+	minThickness 1e-16;
+
+	nGrow 1;
+
+	featureAngle 330;
+
+	slipFeatureAngle 30;
+
+	nRelaxIter 5;
+
+	nSmoothSurfaceNormals 1;
+
+	nSmoothNormals 3;
+
+	nSmoothThickness 10;
+
+	maxFaceThicknessRatio 0.75;
+
+	maxThicknessToMedialRatio 0.3;
+
+	minMedialAxisAngle 90;
+
+	nBufferCellsNoExtrude 0;
+
+	nLayerIter 10;
+
+
+}
+

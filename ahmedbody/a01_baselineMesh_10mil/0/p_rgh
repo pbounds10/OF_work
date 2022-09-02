@@ -1,0 +1,93 @@
+/*---------------------------------------------------------------------------------------------------------------*\
+|                                                                                                                 | 
+|    ANSA_VERSION: 20.1.2                                                                                         | 
+|                                                                                                                 | 
+|    file created by  A N S A  Fri Sep  2 11:36:44 2022                                                           | 
+|                                                                                                                 | 
+|    Output from: /nfs/projects/bounds-aero/boundsThesis/ahmedBody/ahmedSHAP/meshes/a01_baselineMesh_10mil.ansa   | 
+|                                                                                                                 | 
+\*---------------------------------------------------------------------------------------------------------------*/
+
+
+
+FoamFile
+{
+	version 2.0;
+	format binary;
+	class volScalarField;
+	location "";
+	object p_rgh;
+}
+/*---------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------*/
+
+
+dimensions [0 2 -2 0 0 0 0];
+
+internalField uniform 0.;
+
+
+boundaryField
+{
+	ahmed_front
+	{
+		type zeroGradient;
+	}
+
+	ahmed_sides
+	{
+		type zeroGradient;
+	}
+
+	ahmed_top
+	{
+		type zeroGradient;
+	}
+
+	ahmed_bottom
+	{
+		type zeroGradient;
+	}
+
+	ahmed_slant
+	{
+		type zeroGradient;
+	}
+
+	ahmed_rear
+	{
+		type zeroGradient;
+	}
+
+	inlet
+	{
+		type zeroGradient;
+	}
+
+	side_right
+	{
+		type zeroGradient;
+	}
+
+	side_left
+	{
+		type zeroGradient;
+	}
+
+	outlet
+	{
+		type zeroGradient;
+	}
+
+	top
+	{
+		type zeroGradient;
+	}
+
+	bottom
+	{
+		type zeroGradient;
+	}
+
+
+}

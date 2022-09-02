@@ -1,0 +1,31 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2112                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+
+#include "functions/functionInputs"
+
+wallShearStress
+{
+
+    type            wallShearStress;
+    libs            (fieldFunctionObjects);
+
+    patches ($keyPatches);
+
+    writePrecision  $writePrec;
+    writeToFile     $writeToFile;
+    useUserTime     $useUserTime;
+    log             $logged;
+    timeStart       $tStart;
+    timeEnd         $tEnd;
+    executeControl  $executeCon;
+    executeInterval $executeInt;
+    writeControl    $writeCon;
+    writeInterval   $writeInt;
+
+
+}

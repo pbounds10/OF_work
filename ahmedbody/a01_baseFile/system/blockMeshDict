@@ -1,0 +1,89 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+scale   1;
+
+vertices
+(
+    (-4 -3 0) //point 0 bottom front left
+    (10 -3 0) //bottom rear left
+    (10  3 0) //bottom rear right
+    (-4  3 0) //bottom front right
+    (-4 -3 2) //top front left
+    (10 -3 2) //top rear left
+    (10  3 2) //top rear right
+    (-4  3 2) //point 7 top front right
+);
+
+blocks
+(
+    hex (0 1 2 3 4 5 6 7) (140 60 20) simpleGrading (1 1 1)
+    // says that the only bock in this sim is defined by these vertices
+    // tells how many cells to put in x y z
+    //simplegrading tells the scale of each cell direction
+);
+
+edges
+(
+);
+
+boundary
+(
+    symmetry
+    {
+        type patch;
+        faces
+        (
+            (3 7 6 2)
+            (1 5 4 0)
+        );
+    }
+    inlet
+    {
+        type patch;
+        faces
+        (
+            (0 4 7 3)
+        );
+    }
+    outlet
+    {
+        type patch;
+        faces
+        (
+            (2 6 5 1)
+        );
+    }
+    lowerWall
+    {
+        type wall;
+        faces
+        (
+            (0 3 2 1)
+        );
+    }
+    upperWall
+    {
+        type patch;
+        faces
+        (
+            (4 5 6 7)
+        );
+    }
+);
+
+// ************************************************************************* //

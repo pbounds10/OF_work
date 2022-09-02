@@ -1,0 +1,36 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2112                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+
+#include "functions/functionInputs"
+
+
+skinFrictionCo1
+{
+
+    type            skinFrictionCo;
+    libs            ("libfieldFunctionObjects_usr.so");
+
+    patches ($keyPatches);
+
+    rho             rhoInf;      // Indicates incompressible
+    rhoInf          $rhoRef;           // Required when rho = rhoInf
+    magUInf         $UInf;
+
+    writePrecision  $writePrec;
+    writeToFile     $writeToFile;
+    useUserTime     $useUserTime;
+    log             $logged;
+    timeStart       $tStart;
+    timeEnd         $tEnd;
+    executeControl  $executeCon;
+    executeInterval $executeInt;
+    writeControl    $writeCon;
+    writeInterval   $writeInt;
+
+
+}

@@ -1,0 +1,12 @@
+set title "Force coefficients"
+set ylabel 'Force coefficients'
+set xlabel 'Iteration'
+plot "postProcessing/forceCoeffs1/0/coefficient.dat" using 1:2 title "Cd" with lines, \
+     "postProcessing/forceCoeffs1/0/coefficient.dat" using 1:3 title "Cs" with lines, \
+     "postProcessing/forceCoeffs1/0/coefficient.dat" using 1:4 title "Cl" with lines, \
+     "postProcessing/forceCoeffs1/0/coefficient.dat" using 1:5 title "CmRoll" with lines, \
+     "postProcessing/forceCoeffs1/0/coefficient.dat" using 1:6 title "CmPitch" with lines, \
+     "postProcessing/forceCoeffs1/0/coefficient.dat" using 1:7 title "CmYaw" with lines
+
+pause 1
+reread
