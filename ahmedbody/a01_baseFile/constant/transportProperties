@@ -16,6 +16,9 @@ FoamFile
 
 transportModel  Newtonian;
 //air at T=537R
-nu  1.81e-5;
+nu  1.5666592e-5;
+
+//rho =1.18415 kg/m^3 in star
+//mu = 1.85508e-5 Pa-s in star
 
 // ************************************************************************* //
