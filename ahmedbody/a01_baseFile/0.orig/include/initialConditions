@@ -7,7 +7,7 @@
 \*---------------------------------------------------------------------------*/
 
 aRef = 343; //speed of sound
-lRef = 1.044;
+lRef = 0.010; //this is the inlet reference length (about 10mm accoding to uddin)
 Ti = 0.01; //turbulent intensity at the inlet
 mRef = 0.07288629; //reference velocity
 

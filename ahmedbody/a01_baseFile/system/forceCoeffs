@@ -34,9 +34,9 @@ forceCoeffs1
     timeStart       $tStart;
     timeEnd         $tEnd;
     executeControl  $executeCon;
-    executeInterval $executeInt;
+    executeInterval 2;
     writeControl    $writeCon;
-    writeInterval   $writeInt;
+    writeInterval   2;
 }
 
 

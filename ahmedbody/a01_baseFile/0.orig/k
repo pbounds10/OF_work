@@ -27,43 +27,43 @@ boundaryField
     ahmed_front
 	{
         type            kqRWallFunction;
-        value           $internalField;
+        value           uniform $turbulentKE;
 	}
 
 	ahmed_sides
 	{
         type            kqRWallFunction;
-        value           $internalField;
+        value           uniform $turbulentKE;
 	}
 
 	ahmed_top
 	{
         type            kqRWallFunction;
-        value           $internalField;
+        value           uniform $turbulentKE;
 	}
 
 	ahmed_bottom
 	{
         type            kqRWallFunction;
-        value           $internalField;
+        value           uniform $turbulentKE;
 	}
 
 	ahmed_slant
 	{
         type            kqRWallFunction;
-        value           $internalField;
+        value           uniform $turbulentKE;
 	}
 
 	ahmed_rear
 	{
         type            kqRWallFunction;
-        value           $internalField;
+        value           uniform $turbulentKE;
 	}
 
 	inlet
 	{
         type            fixedValue;
-        value           $internalField;
+        value           uniform $turbulentKE;
 	}
 
 	side_right
@@ -81,8 +81,8 @@ boundaryField
 	outlet
 	{
         type            inletOutlet;
-        inletValue      $internalField;
-        value           $internalField;
+        inletValue      uniform $turbulentKE;
+        value           uniform $turbulentKE;
 	}
 
 	top
@@ -94,7 +94,7 @@ boundaryField
 	bottom
 	{
         type            fixedValue;
-        value           $internalField;
+        value           uniform $turbulentKE;
 	}
 
 }

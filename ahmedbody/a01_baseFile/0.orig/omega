@@ -18,7 +18,7 @@ FoamFile
 
 dimensions      [0 0 -1 0 0 0 0];
 
-internalField   uniform $turbulentOmega;
+internalField   uniform 700; //10 times inlet value
 
 boundaryField
 {
@@ -27,43 +27,43 @@ boundaryField
     ahmed_front
 	{
         type            omegaWallFunction;
-        value           $internalField;
+        value           uniform $turbulentOmega;
 	}
 
 	ahmed_sides
 	{
         type            omegaWallFunction;
-        value           $internalField;
+        value           uniform $turbulentOmega;
 	}
 
 	ahmed_top
 	{
         type            omegaWallFunction;
-        value           $internalField;
+        value           uniform $turbulentOmega;
 	}
 
 	ahmed_bottom
 	{
         type            omegaWallFunction;
-        value           $internalField;
+        value           uniform $turbulentOmega;
 	}
 
 	ahmed_slant
 	{
         type            omegaWallFunction;
-        value           $internalField;
+        value           uniform $turbulentOmega;
 	}
 
 	ahmed_rear
 	{
         type            omegaWallFunction;
-        value           $internalField;
+        value           uniform $turbulentOmega;
 	}
 
 	inlet
 	{
         type            fixedValue;
-        value           $internalField;
+        value           uniform $turbulentOmega;
 	}
 
 	side_right
@@ -79,8 +79,8 @@ boundaryField
 	outlet
 	{
         type            inletOutlet;
-        inletValue      $internalField;
-        value           $internalField;
+        inletValue      uniform $turbulentOmega;
+        value           uniform $turbulentOmega;
 	}
 
 	top
@@ -91,7 +91,7 @@ boundaryField
 	bottom
 	{
         type            omegaWallFunction;
-        value           $internalField;
+        value           uniform $turbulentOmega;
 	}
 
 
