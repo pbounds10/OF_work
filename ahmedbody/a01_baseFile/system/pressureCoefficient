@@ -1,3 +1,6 @@
+#include "functions/functionInputs"
+
+
 type            pressure;
 libs            (fieldFunctionObjects);
 
@@ -7,7 +10,8 @@ mode            staticCoeff;
 
 result          cp;
 
-rho             rhoInf;
-rhoInf          1;
+rho             rhoInf;      // Indicates incompressible
+rhoInf          $rhoRef;           // Required when rho = rhoInf
+magUInf         $UInf;
 pInf            0;
-UInf            (44.2 0 0);
+UInf            ($UInf 0 0);

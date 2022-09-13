@@ -17,7 +17,7 @@ boundaryprobes
 
     patches
     (
-      floor
+      $keyPatches
     );
 
     fields

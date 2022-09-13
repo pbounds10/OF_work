@@ -63,13 +63,13 @@ functions
 
     #include "vorticity"
 
-    #includeFunc "stressComponents"
+  //  #includeFunc "stressComponents"
 
     #includeFunc "pressureCoefficient"
 
-    #includeFunc "sample"
+//    #includeFunc "sample"
 
-    #includeFunc "sampleCp"
+    //#includeFunc "sampleCp"
 
     #includeFunc "writeCellCentres"
 
