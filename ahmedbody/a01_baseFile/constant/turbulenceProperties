@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
@@ -26,3 +27,43 @@ RAS
 }
 
 // ************************************************************************* //
+=======
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      turbulenceProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+simulationType RAS;
+
+RAS
+{
+    RASModel            kOmegaSST;
+
+    turbulence          on;
+
+    printCoeffs         on;
+
+    kOmegaSSTCoeffs
+    {
+    alphaK1     0.85;
+    alphaK2     1.0;
+    alphaOmega1 0.5;
+    alphaOmega2 0.856;
+    betaStar    0.09;
+    }
+
+}
+
+// ************************************************************************* //
+>>>>>>> 5e1561fd7240a7c8cf4e94fc39e92aac4fb18fd4
